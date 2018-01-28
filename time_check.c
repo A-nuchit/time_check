@@ -11,7 +11,7 @@ int main(int argc, char const *argv[])
 			for (int j = 0; j < 60; j++)
 			{
 				printf("%d:%d",i,j);
-				if("")
+				
 					if(Hs<i && He>i)  //เมื่อรู้แน่ชัดว่าอยู่ในช่วงแน่นอนนในสภาวะปกติ
 						printf("ON\n");
 					else if(Hs==i){   //เมื่อเวลาเริ่มต้อนเท่ากับเวลาณขฯะนั้น
