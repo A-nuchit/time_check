@@ -11,28 +11,31 @@ int main(int argc, char const *argv[])
 			for (int j = 0; j < 60; j++)
 			{
 				printf("%d:%d",i,j);
-				
+				if(Hs < He || ( (Hs==He) && (Ms < Me))){
 					if(Hs<i && He>i)  //เมื่อรู้แน่ชัดว่าอยู่ในช่วงแน่นอนนในสภาวะปกติ
-						printf("ON\n");
+						printf("+++++++++++\n");
 					else if(Hs==i){   //เมื่อเวลาเริ่มต้อนเท่ากับเวลาณขฯะนั้น
-						if(Ms<=j){
-							printf("ON\n");
+						if(Ms<=j && Me>=j){
+							printf(" ++++++++++ ( 1 )\n");
 						}
 						else{
-							printf("OFF\n");
+							printf("OFF -- 1\n");
 						}
 					}
 					else if(He==i){
 						if(Me>=j){
-							printf("ON\n");
+							printf("++++++++++++( 2 )\n");
 						}
 						else{
-							printf("OFF\n");
+							printf("OFF -- 2\n");
 						}
 					}
 					else{
-						printf("OFF\n");
+						printf("OFF -- 3\n");
 					}
+				}
+				else
+					printf("  >>  out case\n");
 			}
 		}
 
